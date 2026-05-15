@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Move It - 李阳</title>
     <style>
-       
+        
         :root {
             --primary-color: #2563eb;       
             --primary-hover: #1d4ed8;
@@ -170,6 +170,7 @@
             border-radius: 8px;
             outline: none;
             transition: var(--transition-smooth);
+            width: 150px;
         }
         .postcode-form input:focus { border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
         .postcode-form button {
@@ -233,7 +234,7 @@
 
         footer { background-color: var(--bg-card); padding: 80px 0 40px; border-top: 1px solid #e2e8f0; }
         .footer-content { display: flex; justify-content: space-between; }
-        .footer-columns { display: flex; gap: 100px; }
+        .footer-columns { display: flex; gap: 100px; flex-wrap: wrap; }
         .footer-col h4 { margin-bottom: 24px; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 12px; }
@@ -250,6 +251,59 @@
         
         @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
         @keyframes floatUp { from { opacity: 0; bottom: -20px; } to { opacity: 1; bottom: 30px; } }
+
+   
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 42px; }
+            .features-grid { flex-wrap: wrap; }
+            .feature-card { min-width: 45%; }
+            .footer-columns { gap: 50px; }
+            .slide img { height: 400px; }
+        }
+
+        @media (max-width: 768px) {
+       
+            .header-content { flex-direction: column; gap: 15px; padding: 10px 0; }
+            .logo-nav { flex-direction: column; gap: 15px; width: 100%; }
+            nav { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            nav > a, .dropdown { margin-right: 0; }
+            .postcode-form { width: 100%; justify-content: center; }
+
+         
+            .hero { padding: 40px 0; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 15px; padding: 0 10px; }
+            .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto 40px; }
+            .hero-img { max-width: 100%; border-radius: 12px; }
+
+           
+            .features-section { padding: 50px 0; }
+            .feature-card { min-width: 100%; }
+
+            .carousel-container { margin: 30px auto 60px; border-radius: 12px; }
+            .slide img { height: 250px; }
+            .prev-btn, .next-btn { width: 36px; height: 36px; font-size: 16px; }
+            .prev-btn { left: 10px; }
+            .next-btn { right: 10px; }
+
+      
+            .footer-content { flex-direction: column; text-align: center; gap: 40px; }
+            .footer-columns { flex-direction: column; gap: 30px; width: 100%; align-items: center; }
+            .copyright { margin-top: 0; margin-bottom: 30px; order: -1; /* 将版权信息提到最上面或保持排版 */ }
+
+            .student-badge {
+                bottom: 15px;
+                right: 50%;
+                transform: translateX(50%);
+                padding: 8px 16px;
+                font-size: 13px;
+                width: max-content;
+            }
+            .student-badge:hover { transform: translateX(50%) translateY(-3px); }
+            
+         
+            .dropdown-menu { left: 50%; transform: translateX(-50%) translateY(10px); }
+        }
     </style>
 </head>
 <body>
